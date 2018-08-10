@@ -1,0 +1,9 @@
+<div>
+ 
+    <input type="text" [(ngModel)]="name" (keyup.enter)="add()">
+    <div *ngFor="let list of listtype; let i = index">
+      <p><input type="checkbox"  [(ngModel)]="list.check">{{list.name}}</p>
+    </div>
+
+      <button type="submit" (click)="dellist()">Remove marked</button>
+</div>
